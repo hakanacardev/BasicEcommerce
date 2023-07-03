@@ -14,9 +14,11 @@
   max-height: 500px;
   height: 100%;
   display: grid;
+  grid-template-rows: auto 1fr auto;
   border-radius: 16px;
   background-color: #FEFEFE;
   text-align: left;
+  overflow: hidden;
 }
 
 .Header {
@@ -33,17 +35,27 @@
   justify-content: space-between;
   flex-direction: column;
   top: 0;
+  overflow: auto;
 }
 
 .Footer {
   background-color: #FAFAFA;
   bottom: 0;
   max-height: 100px;
-  height: 100%;
   width: 100%;
   overflow: hidden;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   flex-direction: row;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Calculate {
+  border-top: 1px solid black;
+  bottom: 0;
+  max-height: 300px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr ;
 }
