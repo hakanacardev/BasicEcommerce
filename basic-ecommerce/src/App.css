@@ -8,27 +8,6 @@
 
 }
 
-.Layout {
-  max-width: 300px;
-  width: 100%;
-  max-height: 500px;
-  height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  border-radius: 16px;
-  background-color: #FEFEFE;
-  text-align: left;
-  overflow: hidden;
-}
-
-.Header {
-  display: flex;
-  max-height: 20px;
-  justify-content: space-between;
-  padding: 10px;
-
-}
-
 .Main {
   padding: 10px;
   display: flex;
@@ -38,24 +17,11 @@
   overflow: auto;
 }
 
-.Footer {
-  background-color: #FAFAFA;
-  bottom: 0;
-  max-height: 100px;
-  width: 100%;
-  overflow: hidden;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  flex-direction: row;
+.Content {
+  padding: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.Calculate {
-  border-top: 1px solid black;
-  bottom: 0;
-  max-height: 300px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr ;
+  height: 100%;
+  grid-template-rows: 1fr auto;
+  top: 0;
+  overflow: auto;
 }

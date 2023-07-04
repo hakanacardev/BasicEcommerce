@@ -1,0 +1,12 @@
+.Footer {
+    background-color: #FAFAFA;
+    bottom: 0;
+    max-height: 100px;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
