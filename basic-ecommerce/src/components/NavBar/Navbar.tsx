@@ -11,7 +11,7 @@ function Navbar() {
             </div>
             <div style={{ alignItems: 'center', justifyContent: 'center', display: 'flex', flexDirection: 'column' }}>
                 <img src={Account} />
-                List
+                Account
             </div>
         </div>
     )
