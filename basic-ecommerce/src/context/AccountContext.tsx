@@ -2,6 +2,8 @@ import { Dispatch, SetStateAction, createContext, useContext, useState } from "r
 interface ContextType {
     language: string;
     setLanguage: Dispatch<SetStateAction<string>>
+    user: any;
+    setUser: Dispatch<SetStateAction<object>>
 }
 const Context = createContext<ContextType | null>(null);
 interface Iprops {
@@ -9,10 +11,13 @@ interface Iprops {
 }
 const AccountProvider = ({ children }: Iprops) => {
     const [language, setLanguage] = useState("TR")
-    
+    const [user, setUser] = useState([])
+    console.log('user', user)
     const data: ContextType = {
         language,
-        setLanguage
+        setLanguage,
+        user,
+        setUser
     }
 
     return (

@@ -1,0 +1,14 @@
+{
+    "SignUp": "Sign Up",
+    "LogOut": "Log Out",
+    "FullName": "Full Name",
+    "Password": "Password",
+    "List": "List",
+    "Account": "Account",
+    "CurrentLocale": "Current Locale",
+    "Locale": "Locale",
+    "ItemTotal": "Total of Items",
+    "Total": "Total",
+    "TaxandCargo": "Tax + Cargo",
+    "GrandTotal": "Grand Total"
+}

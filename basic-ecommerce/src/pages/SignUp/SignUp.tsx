@@ -6,25 +6,30 @@ import "./SignUp.css"
 import { creeateUserRequest } from '../../api/controllers/user-controller';
 import { useNavigate } from 'react-router-dom';
 import { useAccount } from '../../context/AccountContext';
+import { useTranslation } from 'react-i18next';
 
 const SingUp = () => {
+    const { t } = useTranslation();
+
     const navigate = useNavigate()
-    const { language, setLanguage } = useAccount()
+    const { language, setLanguage, user, setUser } = useAccount()
     const defaultForm = {
         fullName: "",
         email: "",
         password: ""
     }
     const [form, setForm] = useState(defaultForm)
+    console.log('form', form)
     const handleFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
     }
     const handleSignUp = async () => {
         try {
-            let res = await creeateUserRequest(defaultForm);
+            let res = await creeateUserRequest(form);
             console.log('res', res)
             if (res.status === 201) {
                 navigate("/account");
+                setUser(res.data)
             }
         } catch (error) { }
     }
@@ -35,10 +40,10 @@ const SingUp = () => {
     return (
         <ProductTemplate>
             <div className='Main'>
-                <h3>Account</h3>
-                <CustomInput value={form.fullName} onChange={handleFormChange} name='fullName' label='Full  Name' />
+                <h3>{t("Account")}</h3>
+                <CustomInput value={form.fullName} onChange={handleFormChange} name='fullName' label={t("FullName")} />
                 <CustomInput value={form.email} onChange={handleFormChange} name='email' label='E-mail' type='email' />
-                <CustomInput value={form.password} onChange={handleFormChange} name='password' label="Password" type='password' />
+                <CustomInput value={form.password} onChange={handleFormChange} name='password' label={t("Password")} type='password' />
                 <Select
                     labelId="demo-simple-select-label"
                     label="Locale"

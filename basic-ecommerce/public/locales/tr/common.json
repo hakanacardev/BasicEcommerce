@@ -1,0 +1,14 @@
+{
+    "SignUp": "Üye Ol",
+    "LogOut": "Çıkış Yap",
+    "FullName": "İsim Soyisim",
+    "Password": "Şifre",
+    "List": "Liste",
+    "Account": "Hesabım",
+    "CurrentLocale": "Seçili Dil",
+    "Locale": "Dil",
+    "ItemTotal": "Ürünlerin Toplamı",
+    "Total": "Toplam",
+    "TaxandCargo": "Vergiler + Kargo",
+    "GrandTotal": "Genel Toplam"
+}
