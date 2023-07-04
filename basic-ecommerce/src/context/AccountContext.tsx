@@ -9,7 +9,7 @@ interface Iprops {
 }
 const AccountProvider = ({ children }: Iprops) => {
     const [language, setLanguage] = useState("TR")
-
+    
     const data: ContextType = {
         language,
         setLanguage

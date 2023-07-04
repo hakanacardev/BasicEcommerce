@@ -5,5 +5,8 @@
   place-items: center;
   background-color: gray;
   flex-direction: row;
+}
 
+a {
+  text-decoration: none
 }
