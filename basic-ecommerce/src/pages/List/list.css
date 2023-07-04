@@ -1,0 +1,8 @@
+.Wrapper{
+    padding: 10px;
+    display: grid;
+    height: 100%;
+    grid-template-rows: 1fr auto;
+    top: 0;
+    overflow: auto;
+}

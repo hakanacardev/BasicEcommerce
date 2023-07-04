@@ -1,0 +1,8 @@
+.Main {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    top: 0;
+    overflow: auto;
+  }

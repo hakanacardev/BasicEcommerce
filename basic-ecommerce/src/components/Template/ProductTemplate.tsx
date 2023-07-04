@@ -8,11 +8,14 @@ interface Iprops {
 }
 const ProductTemplate = (props: Iprops) => {
     return (
-        <div className='Layout'>
-            <Header />
-            {props.children}
-            <Navbar />
+        <div className='App'>
+            <div className='Layout'>
+                <Header />
+                {props.children}
+                <Navbar />
+            </div>
         </div>
+
     )
 
 }
