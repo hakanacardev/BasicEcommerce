@@ -5,16 +5,17 @@ import { Button, MenuItem, Select, SelectChangeEvent } from '@mui/material';
 import "./SignUp.css"
 import { creeateUserRequest } from '../../api/controllers/user-controller';
 import { useNavigate } from 'react-router-dom';
+import { useAccount } from '../../context/AccountContext';
 
 const SingUp = () => {
     const navigate = useNavigate()
+    const { language, setLanguage } = useAccount()
     const defaultForm = {
         fullName: "",
         email: "",
         password: ""
     }
     const [form, setForm] = useState(defaultForm)
-    const [language, setLanguage] = useState("TR")
     const handleFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
     }
