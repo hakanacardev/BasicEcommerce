@@ -3,6 +3,7 @@ import React from 'react';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
 import Location from "../../Icons/Location.svg"
 import './itemlist.css';
+import { useItem } from '../../context/ItemContext';
 
 interface Iprops {
     title: string;
@@ -11,8 +12,10 @@ interface Iprops {
     distance: number;
     key: number
     imageUrl: string;
+    onClick: () => void
 }
 const ItemList = (props: Iprops) => {
+
     return (
         <div className='Item' key={props.key}>
             <img width={70} height={70} style={{ borderRadius: '16px' }} src={props.imageUrl} />
@@ -29,7 +32,7 @@ const ItemList = (props: Iprops) => {
                         <label>{props.distance}</label>
                     </div>
                 </div>
-                <Button variant="text">Sepete Ekle</Button>
+                <Button onClick={props.onClick} variant="text">Sepete Ekle</Button>
 
             </div>
 

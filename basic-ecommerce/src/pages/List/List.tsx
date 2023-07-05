@@ -3,8 +3,16 @@ import ProductTemplate from '../../components/Template/ProductTemplate';
 import "./list.css"
 import { getItemsRequest } from '../../api/controllers/item-controller';
 import ItemList from '../../components/ItemList/ItemList';
+import Card from '../../components/Card/Card';
+import { useItem } from '../../context/ItemContext';
+import { Button, TextField } from '@mui/material';
+import CustomInput from '../../components/Custom/CustomInput';
+import { Link } from 'react-router-dom';
 
 const List = () => {
+    const { itemCart, setItemCart, addToCart } = useItem()
+
+    console.log('itemcart', itemCart)
     const [data, setData] = useState([])
 
     const getItems = async () => {
@@ -27,6 +35,10 @@ const List = () => {
     return (
         <ProductTemplate>
             <div className='Wrapper'>
+                <Link to="/mycart">
+                    <Button fullWidth variant='contained'>Sepetim</Button>
+                </Link>
+                <CustomInput />
                 <div className='ItemList' >
 
                     {
@@ -39,11 +51,14 @@ const List = () => {
                                     key={v.id}
                                     rating={v.rating}
                                     title={v.title}
+                                    onClick={() => addToCart(v)}
                                 />
                             )
                         })
                     }
                 </div>
+                <Card />
+
             </div>
         </ProductTemplate>
     )

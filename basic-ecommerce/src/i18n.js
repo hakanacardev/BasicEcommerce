@@ -2,9 +2,6 @@ import i18n from "i18next";
 import Backend from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
-import { useAccount } from "./context/AccountContext";
-
-const { language } = useAccount()
 
 i18n
     .use(Backend)
@@ -15,9 +12,7 @@ i18n
             useSuspense: false,
         },
         defaultNS: "common",
-        fallbackLng: language
-            ? language
-            : "EN",
+        fallbackLng: "EN",
         ns: "common",
         debug: false,
         interpolation: {

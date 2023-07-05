@@ -1,9 +1,9 @@
 .Card {
     border-top: 1px solid black;
-    bottom: 0;
-    max-height: 300px;
+    max-height: 250px;
     height: 100%;
     width: 100%;
     display: grid;
     grid-template-rows: 1fr auto;
   }
+ 

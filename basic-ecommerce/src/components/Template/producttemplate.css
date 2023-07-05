@@ -10,7 +10,7 @@
 .Layout {
     max-width: 300px;
     width: 100%;
-    max-height: 500px;
+    max-height: 600px;
     height: 100%;
     display: grid;
     grid-template-rows: auto 1fr auto;

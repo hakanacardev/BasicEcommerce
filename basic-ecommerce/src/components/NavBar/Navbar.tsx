@@ -4,6 +4,7 @@ import List from "../../Icons/List.svg"
 import Account from "../../Icons/Account.svg"
 import { Link } from 'react-router-dom';
 import { useAccount } from '../../context/AccountContext';
+import ShoppingBagRoundedIcon from '@mui/icons-material/ShoppingBagRounded';
 function Navbar() {
     const { user, setUser } = useAccount()
 

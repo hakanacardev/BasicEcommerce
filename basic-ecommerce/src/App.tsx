@@ -5,15 +5,20 @@ import Router from './components/Router';
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import AccountProvider from './context/AccountContext';
+import ItemContext from './context/ItemContext';
 
 function App() {
 
   return (
     <AccountProvider>
-      <ApiProvider>
-        <ToastContainer position="bottom-left" autoClose={2000} />
-        <Router />
-      </ApiProvider>
+      <ItemContext>
+
+        <ApiProvider>
+          <ToastContainer position="bottom-left" autoClose={2000} />
+          <Router />
+        </ApiProvider>
+      </ItemContext>
+
     </AccountProvider>
 
   );
