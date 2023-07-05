@@ -1,5 +1,5 @@
 import { Button } from '@mui/material';
-import React from 'react';
+import React, { memo } from 'react';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
 import Location from "../../Icons/Location.svg"
 import './itemlist.css';
@@ -40,4 +40,4 @@ const ItemList = (props: Iprops) => {
     )
 
 }
-export default ItemList
+export default memo(ItemList)

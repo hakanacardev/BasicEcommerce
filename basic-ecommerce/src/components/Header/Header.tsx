@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import './header.css';
 import Battery from "../../Icons/Battery.svg"
 import Wifi from "../../Icons/Wifi.svg"
@@ -16,4 +16,4 @@ function Header() {
     )
 
 }
-export default Header
+export default memo(Header)

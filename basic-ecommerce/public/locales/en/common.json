@@ -10,5 +10,8 @@
     "ItemTotal": "Total of Items",
     "Total": "Total",
     "TaxandCargo": "Tax + Cargo",
-    "GrandTotal": "Grand Total"
+    "GrandTotal": "Grand Total",
+    "MyCart": "My Cart",
+    "Search": "You can search in item",
+    "Remove": "Remove"
 }

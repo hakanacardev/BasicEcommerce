@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import './navbar.css';
 import List from "../../Icons/List.svg"
 import Account from "../../Icons/Account.svg"
@@ -35,4 +35,4 @@ function Navbar() {
     )
 
 }
-export default Navbar
+export default memo(Navbar)

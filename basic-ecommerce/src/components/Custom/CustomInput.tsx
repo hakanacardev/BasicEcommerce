@@ -1,5 +1,5 @@
 import { TextField, TextFieldProps } from '@mui/material';
-import React from 'react';
+import React, { memo } from 'react';
 
 const CustomInput = ({ fullWidth, variant, ...props }: TextFieldProps) => {
     return (
@@ -8,4 +8,4 @@ const CustomInput = ({ fullWidth, variant, ...props }: TextFieldProps) => {
     )
 
 }
-export default CustomInput
+export default memo(CustomInput)

@@ -10,5 +10,8 @@
     "ItemTotal": "Ürünlerin Toplamı",
     "Total": "Toplam",
     "TaxandCargo": "Vergiler + Kargo",
-    "GrandTotal": "Genel Toplam"
+    "GrandTotal": "Genel Toplam",
+    "MyCart": "Sepetim",
+    "Search": "Ürünler içerisinde arama yapabilirsiniz.",
+    "Remove": "Çıkar"
 }
